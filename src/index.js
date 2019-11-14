@@ -2,7 +2,7 @@ import 'dotenv/config';
 import http from 'http';
 import crypto from 'crypto';
 import { exec } from 'child_process';
-const SECRET = 'MY_GITHUB_WEBHOOK_SECRET';
+const SECRET = process.env.MY_SECRET;
 http
   .createServer((req, res) => {
     req.on('data', chunk => {
